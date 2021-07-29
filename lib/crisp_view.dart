@@ -50,9 +50,11 @@ class _CrispViewState extends State<CrispView> {
       mediaPlaybackRequiresUserGesture: false,
     ),
     android: AndroidInAppWebViewOptions(
+      useWideViewPort: false,
       useHybridComposition: true,
     ),
     ios: IOSInAppWebViewOptions(
+      enableViewportScale: true,
       allowsInlineMediaPlayback: true,
     ),
   );
