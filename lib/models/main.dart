@@ -44,6 +44,7 @@ class CrispMain {
 
     if (user.phone != null) appendScript("window.\$crisp.push([\"set\", \"user:phone\", [\"" + user.phone! + "\"]])");
 
+    // Try to fix webview size
     appendScript("window.CRISP_RUNTIME_CONFIG = {lock_maximized: true,lock_full_view: true,cross_origin_cookies : true}");
     this.user = user;
   }
