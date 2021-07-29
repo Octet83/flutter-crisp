@@ -75,9 +75,7 @@ class _CrispViewState extends State<CrispView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: true,
-      body: InAppWebView(
+    return InAppWebView(
         initialUrlRequest: URLRequest(
           url: Uri.parse(_crispEmbedUrl(
             websiteId: widget.crispMain.websiteId,
@@ -117,8 +115,7 @@ class _CrispViewState extends State<CrispView> {
           }
 
           return NavigationActionPolicy.ALLOW;
-        },
-      ),
+        }
     );
   }
 }
